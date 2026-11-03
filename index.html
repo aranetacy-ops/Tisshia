@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Happy Birthday 🦋</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="bg"></canvas>
+
+  <main class="stage">
+    <section class="card" id="login">
+      <div style="font-size:2.4rem">🦋</div>
+      <h1>A little surprise for you</h1>
+      <p>Enter your birthdate (MMDDYYYY) to open. Pahinayi na daan volume basin kusog kanta ka iring HAHAHA.</p>
+      <input id="pw" type="password" inputmode="numeric" maxlength="8" placeholder="••••••••" autocomplete="off">
+      <button id="go">Open my letter</button>
+      <div class="err" id="err"></div>
+    </section>
+
+    <!-- Questioning Card -->
+    <section class="card hide" id="qCard" style="display: none;">
+      <div id="qEmoji" style="font-size:2.4rem; margin-bottom: 8px;"></div>
+      <h1 id="qTitle">mag pa pickle ka?</h1>
+      <p id="qSubtitle" style="margin: 0 0 16px; font-size: .95rem; opacity: .8;">Check your answer:</p>
+      <div class="q-box-wrap" id="qBoxes"></div>
+    </section>
+
+    <article class="letter" id="letter">
+      <div class="paper">
+        <h2 id="to">Happy Birthday, Tisshia Hope 🎂</h2>
+        <div id="body">
+          <p>Happy Birthday Future Right Now, kidding aside Happy Birthdaaaay Tisshia Hope Daplin! 
+            God Bless po and sa Fam niyo <br>
+            Nanguha ra ko pic without asking, pasayloha na daan ko😅.
+          </p>
+          <p>Joke ra bitaw tong mag pa pickle Hopee. Pero labaann ra gyud miske walay kuntra, wag sumuko philosopher Tisshia😁✌️</p>
+          <p>Ayaw nya iusa imong kaon sa dinner HAHAHA bitaw take care and Godbless po <br>
+          Happy Birthday!🎂</p>
+          <p class="sig">— Cyyy</p>
+        </div>
+      </div>
+      <h3 class="gal-title">📸</h3>
+      <div class="gallery" id="gallery"></div>
+      <button class="add" id="addBtn" hidden>+ Add photos (preview only)</button>
+      <button class="add" id="musicPick" hidden>🎵 Choose music (preview only)</button>
+      <input type="file" id="mfile" accept="audio/*" hidden>
+      <input type="file" id="file" accept="image/*" multiple hidden>
+    </article>
+  </main>
+
+  <audio id="music" src="birthday song.mp3" loop autoplay preload="auto"></audio>
+  <button class="music" id="musicBtn" aria-label="Play or pause music">🎵</button>
+
+  <div class="lb" id="lb">
+    <button class="x" id="lbx" aria-label="Close">✕</button>
+    <img id="lbimg" alt="">
+    <p id="lbcap"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
